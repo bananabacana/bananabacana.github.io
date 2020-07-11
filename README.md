@@ -1,2 +1,2 @@
 # bananabacana.github.io
-permalink: /personal_portfolio.html
+permalink: /index.html
