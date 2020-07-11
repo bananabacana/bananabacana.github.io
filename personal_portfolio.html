@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+		<style>
+			html, body{
+				margin: 0;	
+			}
+			body{
+				font-family: 'Poppins', sans-serif;
+				color: white;
+			}
+			.header-tab{
+				height: 70px;
+				position: fixed;
+				top: 0;
+				width: 100%;
+			}
+			.header-stuff{
+				position: absolute;
+				right: 50px;
+			}
+			.header-stuff button{
+				height: 70px;
+				font-size: 20px;
+				color: white;
+				width: 100px;
+				border: none;
+				outline: none
+			}
+			.header-stuff button:hover{
+				filter: brightness(110%);
+			}
+			.content{
+				padding-top: 240px;
+			}
+			.presentation{
+				height: 400px;
+			}
+			.projects{
+				padding-top: 70px;
+				padding-bottom: 70px;
+			}
+			.projects_list{
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-gap: 20px;	
+			}
+			#show-more{
+				width: 150px;
+				height: 50px;
+				background-color: white;
+				border-radius: 5px;
+				margin-top: 60px;
+				outline: none;
+				border: none;
+				font-family: 'Raleway', sans-serif;
+				font-size: 18px;
+				transition: background-color 0.5s;
+			}
+			.fa{
+				position: relative;
+				left: 5px;
+				transition: left 0.5s;
+			}
+			.social-media{
+				height: 350px;
+			}
+			.social-media h1{
+				padding-top: 80px;
+			}
+			.social-media .media-tags{
+				font-size: 28px;
+			}
+			.media-tags button{
+				font-family: 'Raleway', sans-serif;
+				font-size: 20px;
+				background-color: white;
+				border: none;
+				position: relative;
+				top: 0px;
+				transition: top 0.200s;
+			}
+			.media-tags button:hover{
+				top: 5px;
+			}
+			.media-tags i{
+				margin-right: 10px;
+			}
+			.footer{
+				height: 90px;
+			}
+			.line{
+				width: 300px;
+				height: 1px;
+				margin: auto;
+				margin-top: -10px;
+			}
+			.line + h4{
+				margin-top: 10px;
+			}
+			h1{
+				font-size: 50px;
+			}
+			h3{
+				font-size: 28px;
+				font-weight: normal;
+				margin-top: -30px;
+			}
+			h4{
+				margin-top: 45px;
+			}
+			img{
+				width: 400px;
+				height: 380px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			.img-title{
+				width: 400px;
+				height: 70px;
+				border-radius: 5px;
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+				background-color: white;
+				border: none;
+				margin-left: 17px;
+				margin-top: -8px;
+				font-size: 25px;
+			}
+			#title-text{
+				padding-top: 15px;
+			}
+			button{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body align='center'>	
+		<div class='header-tab'>
+			<section class='header-stuff'>
+				<button href='#about'>About</a>
+				<button href='#work'>Projects</a>
+				<button href='#contact'>Contact</a>
+			</section>
+		</div>
+		<div class='content'>
+			<div class='presentation'>
+				<h1>Welcome! I am Enzo</h1>
+				<h3>
+					<i>a web developer</i>
+				</h1>
+			</div>
+			<div class='projects'>
+				<h2>These are some of my projects</h2>
+				<div class='projects_list'>
+					<div class='project'>
+						<img src='calculator.png'>
+						<div class='img-title'>
+							<div id='title-text'>Javascript calculator</div>
+						</div>
+					</div>
+					<div class='project'>
+						<img src='drums.png'>
+						<div class='img-title'>
+							<div id='title-text'>Drum machine</div>
+						</div>
+					</div>
+					<div class='project'>
+						<img src='grid.png'>
+						<div class='img-title'>
+							<div id='title-text'>Grid example</div>
+						</div>
+					</div>
+					<div class='project'>
+						<img src='join.png'>
+						<div class='img-title'>
+							<div id='title-text'>Join form</div>
+						</div>
+					</div>
+					<div class='project'>
+						<img src='quotes.png'>
+						<div class='img-title'>
+							<div id='title-text'>Quote machine</div>
+						</div>
+					</div>
+				</div>
+				<button id='show-more'>Show more<i class="fa fa-arrow-right"></i></button>
+			</div>
+			<div class='social-media'>
+				<h1>Lets work together!</h1>
+				<div class='media-tags'>
+					<button id='facebook'><i class="fa fa-facebook-square"></i>Facebook</button>
+					<button id='github'><i class="fa fa-github"></i>GitHub</button>
+					<button id='twitter'><i class="fa fa-twitter-square"></i>Twitter</button>
+					<button id='email'><i class="fa fa-envelope-o"></i>Send me an email</button>
+				</div>
+			</div>
+			<div class='footer'>
+				<h4>This site is just for presentation purposes!</h4>
+				<div class='line'></div>
+				<h4><i>Proudly made by Enzo A.</i></h4>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				var hex = '0123456789ABCDEF'
+				var random_color = "#"
+				for(i=0; i<6; i++){
+					var random = Math.floor(Math.random() * 16);
+					random_color += hex.charAt(random);
+				}
+				$(".header-tab").css('background-color', random_color);
+				$(".presentation").css('color', random_color);
+				$(".projects").css('background-color', random_color);
+				$(".social-media").css('color', random_color);
+				$("section.header-stuff").find("button").css('background-color', random_color);
+				$(".footer").css('border-top', '4px solid'+random_color);
+				$(".footer").css('color', random_color);
+				$('#show-more').css('color', random_color);
+				$('.img-title').css('color', random_color);
+				$(".media-tags").find("button").css('color', random_color);
+				$(".line").css('background-color', random_color);
+				$("#show-more").hover(
+					function() {
+						$('.fa').css('left', '10px');
+						$('#show-more').css('filter', 'brightness(90%)');
+					}, function() {
+						$('.fa').css('left', '5px');
+						$('#show-more').css('filter', 'brightness(100%)');
+					}
+				);
+			});
+		</script>
+	</body>
+</html>
